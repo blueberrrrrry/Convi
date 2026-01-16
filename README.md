@@ -111,6 +111,31 @@ docs/                   # 상세 프로젝트 문서화 파일들
 
 ## 🚀 배포 정보 (Deployment)
 
+### GitHub Pages 배포
+
+이 프로젝트는 GitHub Actions를 통해 자동으로 GitHub Pages에 배포됩니다.
+
+#### 배포 설정 방법
+
+1. **GitHub 저장소 설정**
+   - 저장소 페이지로 이동: https://github.com/blueberrrrrry/Convi
+   - Settings → Pages 메뉴로 이동
+   - Source에서 "GitHub Actions" 선택
+
+2. **환경 변수 설정 (Secrets)**
+   - Settings → Secrets and variables → Actions로 이동
+   - 다음 Secrets를 추가하세요:
+     - `VITE_SUPABASE_URL`: Supabase 프로젝트 URL
+     - `VITE_SUPABASE_ANON_KEY`: Supabase Anon Key
+     - `VITE_TOSS_CLIENT_KEY`: 토스페이먼츠 클라이언트 키
+     - `VITE_NAVER_CLIENT_ID`: 네이버 클라이언트 ID (선택사항)
+     - `VITE_NAVER_CLIENT_SECRET`: 네이버 클라이언트 Secret (선택사항)
+
+3. **자동 배포**
+   - `main` 브랜치에 푸시하면 자동으로 배포됩니다
+   - Actions 탭에서 배포 진행 상황을 확인할 수 있습니다
+   - 배포 완료 후 `https://blueberrrrrry.github.io/Convi/`에서 확인 가능합니다
+
 ### 빌드 및 로컬 테스트
 ```bash
 npm run build
