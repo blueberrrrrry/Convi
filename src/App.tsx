@@ -137,7 +137,7 @@ function App() {
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
-          <Router>
+          <Router basename={window.location.pathname.startsWith('/Convi/') ? '/Convi' : ''}>
             <div className="min-h-screen bg-gray-50">
               <main id="main-content">
                 <Routes>
